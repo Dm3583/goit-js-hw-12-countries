@@ -1,6 +1,13 @@
-<div>
-    <p>{{name}}</p>
-    <p>{{region}}</p>
-    <img src="{{flag}}" alt="{{name}}">
-    <p>{{population}}</p>
+<div class="country-card-wrapper">
+    <div class="general-info">
+        <h2>{{name}}</h2>
+        <p><b>Capital: </b>{{capital}}</p>
+        <p><b>Population: </b>{{population}}</p>
+        <p><b>Languages</b></p>
+        <ul>{{#each languages}}
+            <li>{{name}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="img-thumb"><img src="{{flag}}" alt="{{name}}" width="320"></div>
 </div>

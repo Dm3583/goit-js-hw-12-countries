@@ -18,3 +18,22 @@ body {
    */
   /* background-image: url('./images/bg-pattern.png'); */
 }
+.query-input{
+  padding:10px;
+  min-width: 320px;
+}
+.country-card-wrapper{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+}
+
+.general-info{
+  padding: 10px 40px 10px 10px;
+}
+
+.countries-list{
+  font-size: 24px;
+  font-weight: 500;
+}
