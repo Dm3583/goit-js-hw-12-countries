@@ -42,8 +42,12 @@ function searchForQuery(e) {
                 if (data.length >= 2) {
                     notificationClose();
                     clearResults();
-                    const countries = data.map(el => el.name);
-                    renderElements(countries, countriesListTpl)
+                    renderElements(data, countriesListTpl);
+                    data.forEach(el => {
+                        if (query.toLowerCase() === el.name.toLowerCase()) {
+                            renderElements(el, countryTpl);
+                        }
+                    });
                 } else {
                     notificationClose();
                     clearResults();
@@ -60,6 +64,7 @@ function searchForQuery(e) {
                 });
             });
     } else {
+        notificationClose();
         clearResults();
     }
 };
